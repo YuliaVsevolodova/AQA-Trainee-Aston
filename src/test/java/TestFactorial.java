@@ -1,9 +1,12 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
 public class TestFactorial {
     @Test
     public void testCalculateFactorial() {
-        Assertions.assertEquals(6, Factorial.calculateFactorial());
+        int input = 3;
+        int expectedOutput = 6;
+        int resultOutput = Factorial.calculateFactorial(input);
+        Assert.assertEquals(resultOutput, expectedOutput, "Ошибка");
     }
 }
